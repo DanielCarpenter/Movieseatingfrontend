@@ -70,7 +70,7 @@ class SignIn extends React.Component {
     const { email, password } = this.state;
     console.log("we Get here")
     console.log(this.state.email, this.state.password)
-    auth.login(()=> {return})
+    auth.login()
 
   }
 
