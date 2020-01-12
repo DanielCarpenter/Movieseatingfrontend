@@ -1,15 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Signup from "./Signup"
-import Login from "./Login"
-
+import SignUp from "./SignUp"
+import SignIn from "./Login"
+import CheckboxContainer from './Checkbox/CheckboxContainer';
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import {ProtectedRoute} from './protected.route'
+import NavBar from './NavBar'
 function App() {
   return (
-    <div className="App">
-     < Login />
-     <Signup />
-    </div>
+    <BrowserRouter>
+     <NavBar />
+     <Route exact path='/' component={SignIn} />
+     <Route exact path='/register' component={SignUp} />
+     <ProtectedRoute exact path='/listings' component={CheckboxContainer} />
+     <ProtectedRoute exact path='/listings/showing' component={CheckboxContainer} />
+     
+
+     
+    </BrowserRouter>
   );
 }
 
