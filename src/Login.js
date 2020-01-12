@@ -52,6 +52,26 @@ const useStyles = theme => ({
 class SignIn extends React.Component {
   constructor(props) {
     super(props);
+    
+    this.state = {
+      email: "",
+      password: ""
+    };
+  
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(event) {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  }
+  handleSubmit(event) {
+    const { email, password } = this.state;
+    console.log("we Get here")
+    console.log(this.state.email, this.state.password)
+    auth.login(()=> {return})
+
   }
 
   render() {
@@ -72,7 +92,8 @@ class SignIn extends React.Component {
               margin="normal"
               required
               fullWidth
-              id="email"
+              id="email" onChange={this.handleChange}
+              value={this.state.email}
               label="Email Address"
               name="email"
               autoComplete="email"
@@ -86,18 +107,16 @@ class SignIn extends React.Component {
               name="password"
               label="Password"
               type="password"
-              id="password"
+              id="password" onChange={this.handleChange}
+              value={this.state.password}
               autoComplete="current-password"
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
-            <Button onClick={
-              auth.login(() => { return
-              })
-            }
-              component={RouterLink} to="listings"
+            <Button onClick={this.handleSubmit}
+              component={RouterLink} to="/listings"
               type="submit"
               fullWidth
               variant="contained"
