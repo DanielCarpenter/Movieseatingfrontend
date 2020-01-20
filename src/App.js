@@ -9,10 +9,16 @@ import EnhancedTable from './Showings';
 function App() {
   return (
     <BrowserRouter>
-     <NavBar />
+    
+     <Route exact path='/' render={(props) => <NavBar {...props} message={"Movie Seating Powered by React and Material UI"} /> } />
      <Route exact path='/' component={SignIn} />
+     
+     <Route exact path='/register' render={(props) => <NavBar {...props} message={"Movie Seating Powered by React and Material UI"} /> } />
      <Route exact path='/register' component={SignUp} />
+     
+     <Route exact path='/listings' render={(props) => <NavBar {...props} message={"Select Movie Time"} /> } />
      <ProtectedRoute exact path='/listings' component={EnhancedTable} />
+     <Route exact path='/listings/showing' render={(props) => <NavBar {...props} message={"Select Seats"} /> } />
      <ProtectedRoute exact path='/listings/showing' component={CheckboxContainer} />
      
 
