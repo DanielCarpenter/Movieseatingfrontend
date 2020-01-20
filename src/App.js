@@ -6,11 +6,12 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import {ProtectedRoute} from './protected.route'
 import NavBar from './NavBar'
 import EnhancedTable from './Showings';
+import Auth from './Auth'
 function App() {
   return (
     <BrowserRouter>
     {/* Base URL Component Loads */}
-     <Route exact path='/' render={(props) => <NavBar {...props} message={"Movie Seating Powered by React and Material UI"} /> } />
+     {/*<Route exact path='/' render={(props) => <NavBar {...props} message={"Movie Seating Powered by React and Material UI"} /> } /> */ }
      <Route exact path='/' component={SignIn} />
      
      {/* Register Component Loads */}
