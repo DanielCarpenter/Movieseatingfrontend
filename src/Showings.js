@@ -18,9 +18,10 @@ const useStyles = theme => ({
 });
 
 class Showing extends React.Component {
-  constructor(props) {
+  /*constructor(props) {
     super(props);
   }
+  Currently unused constructor*/
 
   render() {
     const { classes } = this.props
@@ -55,6 +56,21 @@ class Showing extends React.Component {
 			  <Button className={classes.button}
 			  component={RouterLink} to="/listings/showing"
 			  color="default" variant="contained">time2</Button>
+          </Grid>
+          <Grid item xs>
+			  <Button className={classes.button}
+			  component={RouterLink} to="/listings/showing"
+			  color="default" variant="contained">time3</Button>
+          </Grid>
+          <Grid item xs>
+			  <Button className={classes.button}
+			  component={RouterLink} to="/listings/showing"
+			  color="default" variant="contained">time4</Button>
+          </Grid>
+          <Grid item xs>
+			  <Button className={classes.button}
+			  component={RouterLink} to="/listings/showing"
+			  color="default" variant="contained">time5</Button>
           </Grid>
         </Grid>
       </div>
