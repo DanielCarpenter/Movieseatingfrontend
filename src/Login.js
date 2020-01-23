@@ -41,7 +41,7 @@ const useStyles = theme => ({
     backgroundColor: theme.palette.secondary.main,
   },
   form: {
-    width: '100%', // Fix IE 11 issue.
+    width: '100%',
     marginTop: theme.spacing(1),
   },
   submit: {
@@ -70,7 +70,7 @@ class SignIn extends React.Component {
     const { email, password } = this.state;
     console.log("we Get here")
     console.log(this.state.email, this.state.password)
-    auth.login()
+    auth.login() //in auth.login will be a fetch post, likely using axios to get the Token.
 
   }
 

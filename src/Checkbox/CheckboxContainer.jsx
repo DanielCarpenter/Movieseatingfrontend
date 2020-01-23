@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import checkboxes from './checkboxes';
 import Checkbox from './Checkbox.jsx';
 import Auth from '../Auth'
+import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
+import Tooltip from '@material-ui/core/Tooltip';
 
 class CheckboxContainer extends React.Component {
   constructor(props) {
@@ -29,22 +32,25 @@ class CheckboxContainer extends React.Component {
   render() {
     return (
       <React.Fragment>
+        <Container>
+        <Grid justify='center'>
         <h1>SCREEN</h1>
+        </Grid>
         <form onSubmit={this.handleSubmit}>
         {
           checkboxes.map(item => (
+            <Tooltip title={item.name}>
             <label key={item.key}>
-              {item.name}
+              
               <Checkbox name={item.name} checked={this.state.checkedItems.get(item.name)} onChange={this.handleChange} disable={item.disable} />
+              
             </label>
+            </Tooltip>
           ))
         }
         <input type='submit' />
         </form>
-        <button onClick={() => Auth.logout(() => {
-                  this.props.history.push("/");
-              })} >
-              Logout</button>
+        </Container>
       </React.Fragment>
     );
   }
