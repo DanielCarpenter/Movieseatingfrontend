@@ -1,12 +1,13 @@
 import React from 'react';
 import SignUp from "./SignUp"
 import SignIn from "./Login"
-import CheckboxContainer from './Checkbox/CheckboxContainer';
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import Theater from './Theater/Theater';
+import {BrowserRouter, Route} from 'react-router-dom'
 import {ProtectedRoute} from './protected.route'
 import NavBar from './NavBar'
 import EnhancedTable from './Showings';
-import Auth from './Auth'
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -24,7 +25,7 @@ function App() {
 
      {/* Protected Movie Seating URL Component Loads */}
      <Route exact path='/listings/showing' render={(props) => <NavBar {...props} message={"Select Seats"} /> } />
-     <ProtectedRoute exact path='/listings/showing' component={CheckboxContainer} />
+     <ProtectedRoute exact path='/listings/showing' component={Theater} />
          
     </BrowserRouter>
   );

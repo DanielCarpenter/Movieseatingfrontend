@@ -1,13 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import checkboxes from './checkboxes';
-import Checkbox from './Checkbox.jsx';
-import Auth from '../Auth'
+import Checkbox from './Seat.jsx';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Tooltip from '@material-ui/core/Tooltip';
 
-class CheckboxContainer extends React.Component {
+class Theater extends React.Component {
   constructor(props) {
     super(props);
 
@@ -25,6 +23,7 @@ class CheckboxContainer extends React.Component {
   }
   handleSubmit = event => {
     event.preventDefault()
+
   
   }
     
@@ -56,4 +55,4 @@ class CheckboxContainer extends React.Component {
   }
 }
 
-export default CheckboxContainer;
+export default Theater;

@@ -68,9 +68,10 @@ class SignIn extends React.Component {
   }
   handleSubmit(event) {
     const { email, password } = this.state;
-    console.log("we Get here")
-    console.log(this.state.email, this.state.password)
-    auth.login() //in auth.login will be a fetch post, likely using axios to get the Token.
+    console.log("we Get here");
+    console.log(email);
+    console.log(password);
+    auth.login(); //in auth.login will be a fetch post, likely using axios to get the Token.
 
   }
 

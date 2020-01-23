@@ -17,7 +17,7 @@ const useStyles = theme => ({
   },
 });
 
-class AutoGrid extends React.Component {
+class Showing extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -62,4 +62,4 @@ class AutoGrid extends React.Component {
   }
 }
 
-export default withStyles(useStyles)(AutoGrid)
+export default withStyles(useStyles)(Showing)

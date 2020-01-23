@@ -1,25 +1,25 @@
 const checkbox = [
   {
     name: 'seat 1',
-    key: 'checkBox1',
+    key: '1',
     label: 'Check Box 1',
     disable: true
   },
   {
     name: 'seat 2',
-    key: 'checkBox2',
+    key: '2',
     label: 'Check Box 2',
-    disable: true
+    disable: false
   },
   {
     name: 'seat 3',
-    key: 'checkBox3',
+    key: '3',
     label: 'Check Box 3',
     disable: false
   },
   {
     name: 'seat 4',
-    key: 'checkBox4',
+    key: '4',
     label: 'Check Box 4',
     disable: true
   },
