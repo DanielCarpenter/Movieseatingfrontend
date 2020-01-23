@@ -15,7 +15,7 @@ function App() {
      <Route exact path='/' component={SignIn} />
      
      {/* Register Component Loads */}
-     <Route exact path='/register' render={(props) => <NavBar {...props} message={"Movie Seating Powered by React and Material UI"} /> } />
+     {/*<Route exact path='/register' render={(props) => <NavBar {...props} message={"Movie Seating Powered by React and Material UI"} /> } /> */}
      <Route exact path='/register' component={SignUp} />
      
      {/* Protected Movie Listing URL Component Loads */}
