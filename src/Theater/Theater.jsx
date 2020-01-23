@@ -23,8 +23,10 @@ class Theater extends React.Component {
   }
   handleSubmit = event => {
     event.preventDefault()
-
-  
+    const item=event.target.name;
+    const isDisabled = event.target.disabled;
+    console.log(event.isChecked)
+    this.setState(prevState => ({ checkedItems: prevState.checkedItems.set(item, isDisabled) }));
   }
     
 
@@ -32,10 +34,10 @@ class Theater extends React.Component {
     return (
       <React.Fragment>
         <Container>
-        <Grid justify='center'>
-        <h1>SCREEN</h1>
-        </Grid>
+        <Grid container justify='center'>
+        <Grid item>
         <form onSubmit={this.handleSubmit}>
+        <Grid item><h1>SCREEN</h1></Grid>
         {
           checkboxes.map(item => (
             <Tooltip title={item.name}>
@@ -47,8 +49,11 @@ class Theater extends React.Component {
             </Tooltip>
           ))
         }
+        
         <input type='submit' />
         </form>
+        </Grid>
+        </Grid>
         </Container>
       </React.Fragment>
     );
