@@ -66,6 +66,7 @@ class SignUp extends React.Component {
     });
   }
   handleSubmit(event) {
+    this.preventDefault()
     const { email, password, firstName, lastName } = this.state;
     console.log("we Get here");
     console.log("email: " + email +" password: " + password + " first: " + firstName + " last: " + lastName);

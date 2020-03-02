@@ -67,6 +67,7 @@ class SignIn extends React.Component {
     });
   }
   handleSubmit(event) {
+    //this.preventDefault()
     const { email, password } = this.state;
     console.log("we Get here");
     console.log(email);
